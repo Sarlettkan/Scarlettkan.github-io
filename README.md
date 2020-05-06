@@ -1,1087 +1,190 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
+
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>清·婉</title><meta name="description"><meta name="author" content="清·婉"><meta name="copyright" content="清·婉"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="https://s2.ax1x.com/2020/02/13/1qOFUI.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="dns-prefetch" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://hm.baidu.com"/><link rel="dns-prefetch" href="https://hm.baidu.com"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="dns-prefetch" href="https://fonts.googleapis.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="dns-prefetch" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="清·婉"><meta name="twitter:description"><meta name="twitter:image" content="https://s2.ax1x.com/2020/02/13/1qOFUI.png"><meta property="og:type" content="website"><meta property="og:title" content="清·婉"><meta property="og:url" content="https://liwanrong.github.io/"><meta property="og:site_name" content="清·婉"><meta property="og:description"><meta property="og:image" content="https://s2.ax1x.com/2020/02/13/1qOFUI.png"><meta property="article:published_time" content="2020-05-06T10:21:43.759Z"><meta property="article:modified_time" content="2020-05-06T10:21:43.759Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '2'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><link rel="canonical" href="https://liwanrong.github.io/"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?17100f845d6bbf9fc52828f5503aa360";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: {"languages":{"author":"作者: 清·婉","link":"链接: ","source":"来源: 清·婉","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: undefined,
+  medium_zoom: true,
+  fancybox: true,
+  Snackbar: {"bookmark":{"message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#5d0c5b","bgDark":"#af17ab","position":"bottom-left"},
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: true,
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isanchor: true
   
-
-  
-  <title>The exclusive space of Skylar</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这儿是小吕同学的独家站点">
-<meta property="og:type" content="website">
-<meta property="og:title" content="The exclusive space of Skylar">
-<meta property="og:url" content="http://guardlv.github.io/index.html">
-<meta property="og:site_name" content="The exclusive space of Skylar">
-<meta property="og:description" content="这儿是小吕同学的独家站点">
-<meta property="article:author" content="Skylar">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="The exclusive space of Skylar" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-<meta name="generator" content="Hexo 4.2.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">The exclusive space of Skylar</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">浙江师范大学 教育技术学 吕慧</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://Guardlv.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-笔记01：Ubuntu安装与配置" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/05/05/%E7%AC%94%E8%AE%B001%EF%BC%9AUbuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2020-05-05T12:30:00.000Z" itemprop="datePublished">2020-05-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%88%9B%E5%AE%A2%E4%B8%8E%E5%AD%A6%E7%A7%91%E6%95%99%E5%AD%A6%E5%BA%94%E7%94%A8/">创客与学科教学应用</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/05/%E7%AC%94%E8%AE%B001%EF%BC%9AUbuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">笔记01：Ubuntu安装与配置</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="认识Ubuntu"><a href="#认识Ubuntu" class="headerlink" title="认识Ubuntu"></a>认识Ubuntu</h2><ul>
-<li>最流行的发行版</li>
-<li>与Rasbian同源于Debian<ul>
-<li>Raspberry Pi 的操作系统</li>
-</ul>
-</li>
-<li>各发行版的指令系统基本一致</li>
-<li>版本获取：<a href="https://ubuntu.com/download/desktop" target="_blank" rel="noopener">https://ubuntu.com/download/desktop</a></li>
-</ul>
-<h2 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h2><ul>
-<li>物理机安装：先装win，再装Ubuntu</li>
-<li>虚拟机安装：最保险的方式</li>
-<li>Linux Subsystem for Windows 10</li>
-<li>宿主中虚拟出软硬件</li>
-<li>相对的：客户机</li>
-<li>宿主机于客户机完全独立</li>
-<li>虚拟机软件<ul>
-<li>VMware：Win、Mac跨平台</li>
-<li>Parallels Desktop：Mac</li>
-<li>Hyper-V：内置在Windows Pro+，Server</li>
-<li>Virtual Box：开源，Win、Mac、Linux跨平台<ul>
-<li>拓展：比较虚拟机与Docker</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>开始之前<ul>
-<li>打开BIOS中的虚拟化选项</li>
-<li>不同主板BIOS选项各有差异</li>
-<li>Virtualization Intel Virtual Technology VM</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://guardlv.github.io/2020/05/05/%E7%AC%94%E8%AE%B001%EF%BC%9AUbuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" data-id="ck9vc13ud000029ax5i8tbgdz" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Learning/" rel="tag">Learning</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-笔记02：Ubuntu基本设置" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/05/05/%E7%AC%94%E8%AE%B002%EF%BC%9AUbuntu%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/" class="article-date">
-  <time datetime="2020-05-05T12:30:00.000Z" itemprop="datePublished">2020-05-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%88%9B%E5%AE%A2%E4%B8%8E%E5%AD%A6%E7%A7%91%E6%95%99%E5%AD%A6%E5%BA%94%E7%94%A8/">创客与学科教学应用</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/05/%E7%AC%94%E8%AE%B002%EF%BC%9AUbuntu%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/">笔记02：Ubuntu基本设置</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>拓展：虚拟机镜像分享站点：<a href="https://www/osboxes.org/ubuntusf.net" target="_blank" rel="noopener">https://www/osboxes.org/ubuntusf.net</a></p>
-<h2 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h2><ul>
-<li>用户、应用软件、操作系统（内核（管理硬件系统）-系统调用，终端命令，图形界面））、硬件系统</li>
-<li>类型<ul>
-<li>桌面：Windows Mac Linux</li>
-<li>服务器：Unix（最早 美国） Linux Windows Server</li>
-<li>嵌入式：Android iOS HarmonyOS</li>
-</ul>
-</li>
-</ul>
-<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><ul>
-<li>内核：运行程序和管理资源的核心程序，提供了硬件与应用程序间的抽象层。内核具备基本的硬件调用功能（终 端命令→系统调用→硬件资源）</li>
-<li>发行版：内核-基础应用，Ubuntu、CentOS、 Deepin、 UOS…..</li>
-</ul>
-<h2 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h2><h3 id="Ubuntu版本"><a href="#Ubuntu版本" class="headerlink" title="Ubuntu版本"></a>Ubuntu版本</h3><ul>
-<li>Desktop：桌面版本，自带Gnome图形环境</li>
-<li>Server：服务器版本，默认没有图形界面</li>
-<li>IoT：loT= Internet of Things，物联网。支持树莓派、Intel NUC等</li>
-<li>Cloud：VPS版， 针对Amazon AWS、Microsoft Azure等优化</li>
-</ul>
-<h3 id="主要衍生版本"><a href="#主要衍生版本" class="headerlink" title="主要衍生版本"></a>主要衍生版本</h3><ul>
-<li>Kubuntu: KDE代 替Gnome</li>
-<li>Xubuntu : Xfce代 替Gnome</li>
-<li>Lubuntu: Lxde代替Gnome</li>
-<li>Ubuntu Studio:集成开源媒体创作工具</li>
-<li>UbuntuKylin （优麒麟） :中国专用版</li>
-</ul>
-<h3 id="版本号"><a href="#版本号" class="headerlink" title="版本号"></a>版本号</h3><ul>
-<li>类型：普通版本，LTS版本（Long Term Support，2年）</li>
-<li>版本号：年代+月份 目前为止每年4、10发布新版</li>
-</ul>
-<h3 id="图形化界面"><a href="#图形化界面" class="headerlink" title="图形化界面"></a>图形化界面</h3><ul>
-<li>统一菜单</li>
-<li>Dock</li>
-<li>程序启动器</li>
-</ul>
-<h3 id="熟悉终端"><a href="#熟悉终端" class="headerlink" title="熟悉终端"></a>熟悉终端</h3><ul>
-<li>启动：Terminal、收藏到Dock栏;</li>
-<li>字符尺寸<ul>
-<li>放大: Ctrl-Shift+=; 缩小: Ctrl–</li>
-<li>属性/快捷键</li>
-</ul>
-</li>
-</ul>
-<h3 id="安装新软件"><a href="#安装新软件" class="headerlink" title="安装新软件"></a>安装新软件</h3><ul>
-<li>比AppStore更早的应用商城</li>
-<li>“Ubuntu软件”，搜索并安装</li>
-<li>本课程中不推荐乱安装</li>
-</ul>
-<h3 id="配置更新源"><a href="#配置更新源" class="headerlink" title="配置更新源"></a>配置更新源</h3><ul>
-<li>软件更新</li>
-<li>选择中国源</li>
-<li>也可测试</li>
-</ul>
-<h3 id="用户账户"><a href="#用户账户" class="headerlink" title="用户账户"></a>用户账户</h3><ul>
-<li>默认账号均为标准账号</li>
-<li>安装、配置时均提示输入密码临时调用管理员权限</li>
-<li>命令行中如何临时使用管理员权限- sudo</li>
-<li>密码输入无提示</li>
-</ul>
-<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><ul>
-<li>安装软件：<code>sudo apt-get install package_name</code></li>
-<li>删除：<code>sudo apt-get remove package_name</code></li>
-<li>更新：<code>sudo apt-get update package_name</code></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://guardlv.github.io/2020/05/05/%E7%AC%94%E8%AE%B002%EF%BC%9AUbuntu%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/" data-id="ck9vchsyq0000ewax31tc0saz" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Learning/" rel="tag">Learning</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-笔记03：Linux基本命令" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/05/05/%E7%AC%94%E8%AE%B003%EF%BC%9ALinux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" class="article-date">
-  <time datetime="2020-05-05T12:30:00.000Z" itemprop="datePublished">2020-05-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%88%9B%E5%AE%A2%E4%B8%8E%E5%AD%A6%E7%A7%91%E6%95%99%E5%AD%A6%E5%BA%94%E7%94%A8/">创客与学科教学应用</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/05/%E7%AC%94%E8%AE%B003%EF%BC%9ALinux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">笔记03：Linux 基本命令</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="文件与目录"><a href="#文件与目录" class="headerlink" title="文件与目录"></a>文件与目录</h2><ul>
-<li>分区：Linux没有分区概念，Linux以目录的组织，只有根目录<ul>
-<li>/bin：可执行文件</li>
-<li>/sbin：供超级用户使用的可执行文件 （s=super）</li>
-<li>/etc：配置文件<ul>
-<li>eg：源地址：/etc/apt/sources.list</li>
-</ul>
-</li>
-<li>/home：家目录，给用户存储文件用<ul>
-<li>每一个用户都有一个用户名命名的文件夹</li>
-<li>收藏夹中的主目录=用户自己的家目录</li>
-<li>同时可以看收藏夹中也有家目录各子目录的快捷方式</li>
-</ul>
-</li>
-<li>/mnt：挂载设备用</li>
-<li>/boot：引导程序</li>
-<li>操作系统：内核→系统调用→内置的命令行或基本的图形程序→第三方应用→用户</li>
-<li>Ubuntu主文件夹里的中文文件夹名称改成英文：export LANG=en_US xdg-user-dirs-gtk-update</li>
-</ul>
-</li>
-</ul>
-<h2 id="Linux终端与命令"><a href="#Linux终端与命令" class="headerlink" title="Linux终端与命令"></a>Linux终端与命令</h2><h3 id="ls：列出当面目录和文件夹"><a href="#ls：列出当面目录和文件夹" class="headerlink" title="ls：列出当面目录和文件夹"></a>ls：列出当面目录和文件夹</h3><ul>
-<li>-l：详细输出文件或目录信息</li>
-<li>-h：人性化方式显示文件大小 <code> bytes&lt;kb&lt;mb&lt;gb&lt;tb&lt;pb&lt;eb&lt;zb&lt;yb </code></li>
-<li>-a：显示隐藏文件（以.开始）</li>
-<li>~：表示用户自己的家目录 =/home/username</li>
-<li>.：当前目录</li>
-<li>..：上一级目录</li>
-<li>ls -a -h=ls -al</li>
-</ul>
-<h3 id="pwd：显示当前工作目录"><a href="#pwd：显示当前工作目录" class="headerlink" title="pwd：显示当前工作目录"></a>pwd：显示当前工作目录</h3><ul>
-<li><code>print working directory</code></li>
-</ul>
-<h3 id="cd：切换文件夹"><a href="#cd：切换文件夹" class="headerlink" title="cd：切换文件夹"></a>cd：切换文件夹</h3><ul>
-<li><code>change directory</code></li>
-<li>cd /：进入根目录</li>
-<li>cd..：向上</li>
-<li>cd~：回到home</li>
-<li>cd-：后退</li>
-<li>linux命令区分大小写</li>
-</ul>
-<h3 id="tree：查看目录结构"><a href="#tree：查看目录结构" class="headerlink" title="tree：查看目录结构"></a>tree：查看目录结构</h3><h3 id="touch：创建文件"><a href="#touch：创建文件" class="headerlink" title="touch：创建文件"></a>touch：创建文件</h3><ul>
-<li>格式：touch 文件名</li>
-<li>如果文件不存在则新建一个，如果文件存在则修改最近修改时间</li>
-</ul>
-<h3 id="mkdir：创建目录"><a href="#mkdir：创建目录" class="headerlink" title="mkdir：创建目录"></a>mkdir：创建目录</h3><ul>
-<li><code>make directory</code></li>
-<li>格式：touch 文件名</li>
-<li>支持同时创建多个文件夹<ul>
-<li>同级目录：空格间隔 <code>mkdir 001 002 003</code></li>
-<li>层级目录：用-p参数 <code>mkdir -p a/b/c</code></li>
-</ul>
-</li>
-<li>同级目录下，文件与文件夹不能重名      <img src="https://s1.ax1x.com/2020/04/22/JtVPjf.png" style="margin-left: 0;width: 400px">
-
-</li>
-</ul>
-<h3 id="rmdir：删除空目录"><a href="#rmdir：删除空目录" class="headerlink" title="rmdir：删除空目录"></a>rmdir：删除空目录</h3><ul>
-<li><code>remove directory</code></li>
-<li>终端删除的内容不进入回收站</li>
-<li>只能删除空目录</li>
-</ul>
-<h3 id="rm：删除文件（remove）"><a href="#rm：删除文件（remove）" class="headerlink" title="rm：删除文件（remove）"></a>rm：删除文件（remove）</h3><ul>
-<li>可以使用通配符：<ul>
-<li>*.?：任意多字符，包括0</li>
-<li>?.txt：任意一个字符，至少一个</li>
-<li>[]：表示范围，[abc]表示a，b，c，[a-f].[0-9]</li>
-</ul>
-</li>
-<li>rm -r：非空目录名，可以删除非空目录</li>
-<li>终端删除的内容不进入回收站</li>
-</ul>
-<h3 id="clear：清屏"><a href="#clear：清屏" class="headerlink" title="clear：清屏"></a>clear：清屏</h3><h3 id="技巧："><a href="#技巧：" class="headerlink" title="技巧："></a>技巧：</h3><ul>
-<li>利用上下键</li>
-<li>使用ta键：命令与路径自动补全</li>
-<li>区分相对路径和绝对路径<ul>
-<li>绝对路径：从/开始的路径<ul>
-<li><code>~=/home/username</code>，所以~开头的也称为绝对路径</li>
-</ul>
-</li>
-<li>相对路径：从当前目录开始的路径</li>
-</ul>
-</li>
-</ul>
-<h3 id="查询帮助"><a href="#查询帮助" class="headerlink" title="查询帮助"></a>查询帮助</h3><ul>
-<li>Win：帮助菜单、F1</li>
-<li>Linux<ul>
-<li>参数：–help 一次性显示所有帮助信息</li>
-<li>命令：man（manual）<ul>
-<li>格式：man 命令（空格下一屏，b上一屏，q退出）</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="cp：复制文件"><a href="#cp：复制文件" class="headerlink" title="cp：复制文件"></a>cp：复制文件</h3><ul>
-<li>格式：cp 源文件路径 目标路径</li>
-<li>-r：递归复制子目录和文件，只跟目录</li>
-</ul>
-<h3 id="mv：移动文件"><a href="#mv：移动文件" class="headerlink" title="mv：移动文件"></a>mv：移动文件</h3><ul>
-<li>格式：mv 源文件名 目标路径</li>
-<li>可以用mv重命名文件</li>
-<li>移动子目录和文件，不需要加-r</li>
-</ul>
-<h3 id="cat：查看文件内容-（catalog）"><a href="#cat：查看文件内容-（catalog）" class="headerlink" title="cat：查看文件内容 （catalog）"></a>cat：查看文件内容 （catalog）</h3><ul>
-<li>格式：cat文件名</li>
-<li>-b：对非空行编号</li>
-<li>-n：对所有行编号</li>
-</ul>
-<h3 id="more：查看文件内容"><a href="#more：查看文件内容" class="headerlink" title="more：查看文件内容"></a>more：查看文件内容</h3><ul>
-<li>分屏显示</li>
-<li>操作方式：空格下一屏，b上一屏，q退出</li>
-</ul>
-<h3 id="grep：搜索"><a href="#grep：搜索" class="headerlink" title="grep：搜索"></a>grep：搜索</h3><ul>
-<li>格式：grep 字符串 文件</li>
-<li>字符串中有空格，用引号</li>
-<li>-n：对搜索出来的结果进行编号（非空行）</li>
-<li>-v：显示不匹配的行</li>
-<li>搜索命令区分大小写</li>
-<li>-i：不区分大小写</li>
-<li>^：行的开头</li>
-<li>$：行的结尾</li>
-<li>通常是搭配管道使用：重定向<ul>
-<li>&gt;：输出并覆盖原始内容</li>
-<li>&gt;&gt;：输出并追加至原始内容</li>
-<li>|：表示一个命令的输出作为另一个信息的输入<ul>
-<li>示例：<code>ls -alh ~ | more ls -alh ~ | grep P</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="echo：显示命令"><a href="#echo：显示命令" class="headerlink" title="echo：显示命令"></a>echo：显示命令</h3><img src="https://s1.ax1x.com/2020/04/22/JtVFu8.png" style="margin-left: 0;width: 500px">
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://guardlv.github.io/2020/05/05/%E7%AC%94%E8%AE%B003%EF%BC%9ALinux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" data-id="ck9vchsyx0001ewaxgvvxejlw" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Learning/" rel="tag">Learning</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-笔记04：Linux远程管理" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/05/05/%E7%AC%94%E8%AE%B004%EF%BC%9ALinux%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86/" class="article-date">
-  <time datetime="2020-05-05T12:30:00.000Z" itemprop="datePublished">2020-05-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%88%9B%E5%AE%A2%E4%B8%8E%E5%AD%A6%E7%A7%91%E6%95%99%E5%AD%A6%E5%BA%94%E7%94%A8/">创客与学科教学应用</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/05/%E7%AC%94%E8%AE%B004%EF%BC%9ALinux%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86/">笔记04：Linux远程管理</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Ctrl-Alt-T:启动终端</p>
-<h2 id="shutdown：开关机及重启命令"><a href="#shutdown：开关机及重启命令" class="headerlink" title="shutdown：开关机及重启命令"></a>shutdown：开关机及重启命令</h2><ul>
-<li>默认一分钟关机</li>
-<li>取消: shutdown -c</li>
-<li>shutdown -r 重启</li>
-<li>定时任务： -num; hh:mm, now</li>
-<li>远程管理时尽量不要关机或重启</li>
-</ul>
-<h2 id="ifconfig：网络配置"><a href="#ifconfig：网络配置" class="headerlink" title="ifconfig：网络配置"></a>ifconfig：网络配置</h2><ul>
-<li><code> ifconfig | grep</code></li>
-</ul>
-<h2 id="ping"><a href="#ping" class="headerlink" title="ping"></a>ping</h2><ul>
-<li>默认一直发送数据包</li>
-<li>按Ctrl-C中止</li>
-</ul>
-<h2 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a>ssh</h2><ul>
-<li>Linux中非常常用的工具，可以利用SSH客户端登录SSH服务器</li>
-<li>Windows下的Xshell→Linux上的SSH服务器</li>
-</ul>
-<h3 id="SSH端口：默认22"><a href="#SSH端口：默认22" class="headerlink" title="SSH端口：默认22"></a>SSH端口：默认22</h3><ul>
-<li>Windows下的常用SSH客户端：putty，xshell，secureCRT</li>
-<li>Windows 10自带了SSH命令行客户端</li>
-<li>所有类Unix系统均自带SSH命令行</li>
-<li>格式：<code>ssh -p port user@host</code><ul>
-<li>host=192.168.56.1</li>
-<li>p=22</li>
-<li>user= lester</li>
-<li>pwd=..</li>
-</ul>
-</li>
-</ul>
-<h3 id="在Linux上安装SSH服务器"><a href="#在Linux上安装SSH服务器" class="headerlink" title="在Linux上安装SSH服务器"></a>在Linux上安装SSH服务器</h3><ul>
-<li>openssh-server</li>
-</ul>
-<h3 id="深入理解计算机网络，特别是NAT"><a href="#深入理解计算机网络，特别是NAT" class="headerlink" title="深入理解计算机网络，特别是NAT"></a>深入理解计算机网络，特别是NAT</h3><ul>
-<li>桥接网络（家中路由器开通了DHCP推荐）<ul>
-<li>virtual，host处于同一个网段</li>
-<li>用ipconfig查出当前地址</li>
-<li>hostname=inet地址</li>
-</ul>
-</li>
-<li>Nat或Nat网络  <img src="https://s1.ax1x.com/2020/04/22/JN1B2F.png" style="margin-left: 0; width: 600px" /></li>
-<li><code>sudo apt-get install openssh-server</code><ul>
-<li>启动：<code>sudo /etc/init.d/ssh start</code></li>
-<li>关闭：<code>sudo /etc/init.d/ssh stop</code></li>
-</ul>
-</li>
-</ul>
-<h3 id="ssh客户端："><a href="#ssh客户端：" class="headerlink" title="ssh客户端："></a>ssh客户端：</h3><ul>
-<li>Linux，Mac所有版本自带ssh</li>
-<li>Windows 7开始自带ssh</li>
-<li>第三方工具：xshell，putty</li>
-</ul>
-<h3 id="ssh远程登录格式"><a href="#ssh远程登录格式" class="headerlink" title="ssh远程登录格式"></a>ssh远程登录格式</h3><ul>
-<li><code>ssh [-p port] username @host</code></li>
-</ul>
-<h3 id="ssh配置免密码登录"><a href="#ssh配置免密码登录" class="headerlink" title="ssh配置免密码登录"></a>ssh配置免密码登录</h3><ul>
-<li>原理<ul>
-<li>生成一个密钥对，在客户机上存放私钥，在服务器上存放公钥</li>
-<li>每次登录时，取私钥并与服务器上的公钥配对，配对成功表示认证通过</li>
-</ul>
-</li>
-<li>步骤<ul>
-<li>如何生成？<ul>
-<li><code>ssh-keygen(key generator)</code>：根据机器的特征值生成id_rsa（私钥），id_rsa.pub（公钥）</li>
-</ul>
-</li>
-<li>生成后的密钥存放在何处？<ul>
-<li>存放在用户目录下的.ssh</li>
-</ul>
-</li>
-<li>服务器如何配置<ul>
-<li>任务：id_rsa.pub文件的内容添加到远程主机.ssh目录下的authorized_keys文件<ul>
-<li>linux系统中<ul>
-<li><code>ssh_copy_id [-p port] username@host</code></li>
-</ul>
-</li>
-<li>Windows<ul>
-<li>可视化方式复制</li>
-<li>scp：secure copy，用于远程的安全拷贝<ul>
-<li><code>scp [-P port] 本地文件 username@host：Desktop/01.py</code></li>
-<li><code>cat id_rsa.pub >~/.ssh/authorized_keys</code></li>
-</ul>
-</li>
-<li>SCP扩展<ul>
-<li>本地文件上传至服务器</li>
-<li>远程文件下载到本地（任务：将远程主机Desktop下的hello.py下载）<br>  <code>w  scp -P 22 username@host:Desktop/hello.py hello_world.py</code></li>
-<li>将本地文件夹上传至服务器<br>  <code>w scp -r zjnu username@host:Desktop</code></li>
-<li>将远程文件夹下载至本地<br>  <code>w scp -r username@host:Desktop/01 01_copy</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="别名登录"><a href="#别名登录" class="headerlink" title="别名登录"></a>别名登录</h3><ul>
-<li>给我们访问的远程主机设置一个容易记住的别名，类似于：域名VS ip地址</li>
-<li>不同点：域名需要在DNS注册，别名在本机注册</li>
-<li>windows方法<ul>
-<li>.ssh下新建文件</li>
-<li>config中配置别名</li>
-<li>别名登录：ssh user@别名</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://guardlv.github.io/2020/05/05/%E7%AC%94%E8%AE%B004%EF%BC%9ALinux%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86/" data-id="ck9vchsz00003ewaxcbug8857" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Learning/" rel="tag">Learning</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-笔记05：Linux用户权限" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/05/05/%E7%AC%94%E8%AE%B005%EF%BC%9ALinux%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/" class="article-date">
-  <time datetime="2020-05-05T12:30:00.000Z" itemprop="datePublished">2020-05-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%88%9B%E5%AE%A2%E4%B8%8E%E5%AD%A6%E7%A7%91%E6%95%99%E5%AD%A6%E5%BA%94%E7%94%A8/">创客与学科教学应用</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/05/%E7%AC%94%E8%AE%B005%EF%BC%9ALinux%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/">笔记05：Linux用户权限</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="用户权限"><a href="#用户权限" class="headerlink" title="用户权限"></a>用户权限</h2><ul>
-<li>以ls -l为例<br>  -rw-rw-r– 1 lwr lwr  398 4月   1 00:16 id_rsa.pub</li>
-<li>依次：权限标识符，硬连接数，用户与组，文件容量，最后修改日期，名称</li>
-</ul>
-<h3 id="权限标识符：10位"><a href="#权限标识符：10位" class="headerlink" title="权限标识符：10位"></a>权限标识符：10位</h3><ul>
-<li>第一位：d/- （类别，d表示目录 -表示文件）</li>
-<li>后九位：<ul>
-<li>第一组RWX：拥有者的权限</li>
-<li>第二组RWX：所在组的权限</li>
-<li>第三组RWX：其他人的权限<ul>
-<li>R：readable：可读的</li>
-<li>W：writeable：可写的</li>
-<li>X：exectable：可修改的</li>
-</ul>
-</li>
-<li>例：<br>  rw-r–r–: 110 100 100<br>  rwxr-xr-x: 111 101 101<br>  最大的是：7；最小的是：0</li>
-</ul>
-</li>
-</ul>
-<h3 id="权限掩码及原理"><a href="#权限掩码及原理" class="headerlink" title="权限掩码及原理"></a>权限掩码及原理</h3><ul>
-<li>rwxrwxrwx: 777 （Web程序的上传目录）</li>
-<li>———–：000</li>
-<li>只读：R–,100，4</li>
-<li>读写：RW-,110，6</li>
-<li>读取与执行：R-X，101，5</li>
-<li>所有权限：7</li>
-</ul>
-<h3 id="chmod"><a href="#chmod" class="headerlink" title="chmod"></a>chmod</h3><ul>
-<li>格式：chmod +/- rwx 文件名</li>
-<li>方法<ul>
-<li>chmod +/- rwx filename/directory<ul>
-<li>chmod mask filename/directory</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>示例：文件夹的可执行权限</li>
-<li>示例：文件夹的可执行权限（Python脚本，shell脚本）</li>
-</ul>
-<h2 id="超级用户"><a href="#超级用户" class="headerlink" title="超级用户"></a>超级用户</h2><h3 id="Linux用户类型："><a href="#Linux用户类型：" class="headerlink" title="Linux用户类型："></a>Linux用户类型：</h3><ul>
-<li>-root用户：用于系统维护，具有所有权限</li>
-<li>绝大多数的linux发行版不推荐使用root</li>
-<li>安装时创建的为标准用户</li>
-</ul>
-<h3 id="sudo"><a href="#sudo" class="headerlink" title="sudo"></a>sudo</h3><ul>
-<li>su: substitude user 替换用户</li>
-<li>预设的身份是root</li>
-<li>需要输入密码，有5分钟有效期<ul>
-<li>如果未经授权，尝试使用root，会发送警告</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://guardlv.github.io/2020/05/05/%E7%AC%94%E8%AE%B005%EF%BC%9ALinux%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/" data-id="ck9vchsza0009ewax643e6ktr" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Learning/" rel="tag">Learning</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-笔记06：Linux用户管理" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/05/05/%E7%AC%94%E8%AE%B006%EF%BC%9ALinux%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/" class="article-date">
-  <time datetime="2020-05-05T12:30:00.000Z" itemprop="datePublished">2020-05-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%88%9B%E5%AE%A2%E4%B8%8E%E5%AD%A6%E7%A7%91%E6%95%99%E5%AD%A6%E5%BA%94%E7%94%A8/">创客与学科教学应用</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/05/%E7%AC%94%E8%AE%B006%EF%BC%9ALinux%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/">笔记06：Linux用户管理</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="创建、删除组"><a href="#创建、删除组" class="headerlink" title="创建、删除组"></a>创建、删除组</h2><ul>
-<li>创建组：groupadd</li>
-<li>删除组：groupdel<ul>
-<li>tip: 创建新用户时，会自动创建同名用户组</li>
-</ul>
-</li>
-</ul>
-<h2 id="查看组信息"><a href="#查看组信息" class="headerlink" title="查看组信息"></a>查看组信息</h2><ul>
-<li>cat /etc/group</li>
-</ul>
-<h2 id="修改文件或目录的所在组"><a href="#修改文件或目录的所在组" class="headerlink" title="修改文件或目录的所在组"></a>修改文件或目录的所在组</h2><ul>
-<li>sudo chgrp 组名、文件或目录</li>
-<li>默认不修改子目录组信息，要递归修改：</li>
-<li>chgrp -R 组名 目录名</li>
-</ul>
-<h2 id="添加用户：useradd"><a href="#添加用户：useradd" class="headerlink" title="添加用户：useradd"></a>添加用户：useradd</h2><ul>
-<li>-g:设置所在用户组</li>
-<li>-m :自动创建家目录</li>
-</ul>
-<h2 id="查看用户信息"><a href="#查看用户信息" class="headerlink" title="查看用户信息"></a>查看用户信息</h2><ul>
-<li>cat /etc/passwd</li>
-<li>cat /etc/passwd | grep 用户名</li>
-<li>lester:   x:  1000:  1000:  Lester,,,  :   /home/lester  :/bin/bash<ul>
-<li>lester:用户名</li>
-<li>x:已经设置密码</li>
-<li>1000：用户标识</li>
-<li>1000: 组标识</li>
-<li>Lester: 用户名</li>
-<li>/home/lester: 家目录</li>
-<li>/bin/bash： 登录时使用的bash</li>
-</ul>
-</li>
-</ul>
-<h2 id="设置用户密码"><a href="#设置用户密码" class="headerlink" title="设置用户密码"></a>设置用户密码</h2><ul>
-<li>passwd 用户名</li>
-<li>不跟用户名，修改自己的密码</li>
-</ul>
-<h2 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h2><ul>
-<li>userdel 用户名</li>
-<li>-r: 删除用户时，同时删除家目录</li>
-</ul>
-<h2 id="查看id"><a href="#查看id" class="headerlink" title="查看id"></a>查看id</h2><ul>
-<li>方法一： cat /etc/passwd | grep 用户名</li>
-<li>方法二：id <ul>
-<li>id 用户名：显示特定用户的标识</li>
-<li>id ：显示当前用户的标识</li>
-</ul>
-</li>
-</ul>
-<h2 id="查看当前登录的用户：who"><a href="#查看当前登录的用户：who" class="headerlink" title="查看当前登录的用户：who"></a>查看当前登录的用户：who</h2><ul>
-<li>：0表示当前终端</li>
-</ul>
-<h2 id="查看当前用户的账号名：whoami"><a href="#查看当前用户的账号名：whoami" class="headerlink" title="查看当前用户的账号名：whoami"></a>查看当前用户的账号名：whoami</h2><h2 id="解决新建用户无法使用sudo"><a href="#解决新建用户无法使用sudo" class="headerlink" title="解决新建用户无法使用sudo"></a>解决新建用户无法使用sudo</h2><ul>
-<li>原理：只有在sudo组，成为成员才可以使用sudo组权限，称为sudoer</li>
-<li>usermode更改用户的组信息</li>
-<li>sudo usermod -a -G sudo roy</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://guardlv.github.io/2020/05/05/%E7%AC%94%E8%AE%B006%EF%BC%9ALinux%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/" data-id="ck9vchszb000aewax9fcm6z5x" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Learning/" rel="tag">Learning</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-笔记07：远程文件传输方案" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/05/05/%E7%AC%94%E8%AE%B007%EF%BC%9A%E8%BF%9C%E7%A8%8B%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E6%96%B9%E6%A1%88/" class="article-date">
-  <time datetime="2020-05-05T12:30:00.000Z" itemprop="datePublished">2020-05-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%88%9B%E5%AE%A2%E4%B8%8E%E5%AD%A6%E7%A7%91%E6%95%99%E5%AD%A6%E5%BA%94%E7%94%A8/">创客与学科教学应用</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/05/%E7%AC%94%E8%AE%B007%EF%BC%9A%E8%BF%9C%E7%A8%8B%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E6%96%B9%E6%A1%88/">笔记07：远程文件传输方案</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h2><h2 id="sftp：可以理解为从ssh通道走的FTP"><a href="#sftp：可以理解为从ssh通道走的FTP" class="headerlink" title="sftp：可以理解为从ssh通道走的FTP"></a>sftp：可以理解为从ssh通道走的FTP</h2><h3 id="可以使用的客户端"><a href="#可以使用的客户端" class="headerlink" title="可以使用的客户端"></a>可以使用的客户端</h3><ul>
-<li>Winscp</li>
-<li>Filezilla</li>
-<li>建议Windows中使用Chocolatey</li>
-</ul>
-<h3 id="远程修改实现"><a href="#远程修改实现" class="headerlink" title="远程修改实现"></a>远程修改实现</h3><ul>
-<li>场景：需要修改远程主机上的某个文件</li>
-<li>解决方案　<ul>
-<li>ssh远程登录并用nano，vi编辑</li>
-<li>先用scp、winscp等下载文件，再上传文件</li>
-<li>在本地的文件编辑器中添加远程编辑的功能</li>
-<li>用本地编辑器的远程修改插件<ul>
-<li>示例：VS Code +Remote ssh<ul>
-<li>在VSCode插件目录中搜索并安装Remote-SSH</li>
-<li>添加主机，Ctrl +Shift +P， Remote ssh - add a new host，添加后会出现在ssh targets。</li>
-<li>在主机项上右键，connect …</li>
-<li>Open folder，打开远程主机上的某个目录</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="Extra：Virtual-Box中客户机（ubuntu）与主机（win-10）的文件共享"><a href="#Extra：Virtual-Box中客户机（ubuntu）与主机（win-10）的文件共享" class="headerlink" title="Extra：Virtual Box中客户机（ubuntu）与主机（win 10）的文件共享"></a>Extra：Virtual Box中客户机（ubuntu）与主机（win 10）的文件共享</h3><ul>
-<li>安装增强功能<ul>
-<li>点击虚拟机菜单的“安装增强功能”</li>
-<li>自动运行光盘中的启动程序</li>
-<li>重启虚拟机</li>
-</ul>
-</li>
-<li>添加共享文件夹<ul>
-<li>共享文件夹路径：win 10上的某个目录</li>
-<li>共享文件夹名称：随意</li>
-<li>建议选项：自动挂载，固定分配</li>
-<li>挂载点：一般放在/media/目录下</li>
-</ul>
-</li>
-<li>有可能出现的问题：打开挂载点时提示无权限<ul>
-<li>原因：所用的用户不在vboxsf组</li>
-<li>vboxsf：virtual box shared folder</li>
-<li>sudo usermod -a -G </li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://guardlv.github.io/2020/05/05/%E7%AC%94%E8%AE%B007%EF%BC%9A%E8%BF%9C%E7%A8%8B%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E6%96%B9%E6%A1%88/" data-id="ck9vchszc000cewax8ey57cez" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Learning/" rel="tag">Learning</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-笔记08：Git与Github使用初步" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/05/05/%E7%AC%94%E8%AE%B008%EF%BC%9AGit%E4%B8%8EGithub%E4%BD%BF%E7%94%A8%E5%88%9D%E6%AD%A5/" class="article-date">
-  <time datetime="2020-05-05T12:30:00.000Z" itemprop="datePublished">2020-05-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%88%9B%E5%AE%A2%E4%B8%8E%E5%AD%A6%E7%A7%91%E6%95%99%E5%AD%A6%E5%BA%94%E7%94%A8/">创客与学科教学应用</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/05/%E7%AC%94%E8%AE%B008%EF%BC%9AGit%E4%B8%8EGithub%E4%BD%BF%E7%94%A8%E5%88%9D%E6%AD%A5/">笔记08：Git与Github使用初步</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Git简介"><a href="#Git简介" class="headerlink" title="Git简介"></a>Git简介</h2><ul>
-<li>版本控制系统（Version Control System, VCS）</li>
-<li>其它VCS: CVS, Subersion, Visual source safe</li>
-<li>开源共享，可以自架服务器，同时使用客户端访问与应用</li>
-<li>专用的第三方的Git服务，相当于租用了别人的Git服务器，在上面创建软件仓库并进行版本管理。</li>
-<li>典型的Git服务：Github，Gitlab</li>
-</ul>
-<h2 id="Git中的基本概念"><a href="#Git中的基本概念" class="headerlink" title="Git中的基本概念"></a>Git中的基本概念</h2><ul>
-<li>仓库：相当于一个托管的单位，一般对应一个项目</li>
-<li>版本： 仓库中的文件的某一个状态</li>
-</ul>
-<h2 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h2><ul>
-<li>Ubuntu或者Raspbian OS：</li>
-<li>apt-get/apt install git</li>
-</ul>
-<h2 id="Git的身份认证"><a href="#Git的身份认证" class="headerlink" title="Git的身份认证"></a>Git的身份认证</h2><ul>
-<li>一般情况下采用SSH或PGP密钥认证的方式。</li>
-<li>参考：SSH的免密登录</li>
-</ul>
-<h2 id="创建Git仓库"><a href="#创建Git仓库" class="headerlink" title="创建Git仓库"></a>创建Git仓库</h2><ul>
-<li><a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a> 注册一个账号</li>
-<li>Repositories（仓库）中选择New</li>
-<li>仓库地址：<ul>
-<li><a href="https://github.com/liwanrong/ubuntu.git" target="_blank" rel="noopener">https://github.com/liwanrong/ubuntu.git</a></li>
-<li><a href="mailto:git@github.com">git@github.com</a>:liwanrong/ubuntu.git</li>
-</ul>
-</li>
-</ul>
-<h2 id="Git初始化配置"><a href="#Git初始化配置" class="headerlink" title="Git初始化配置"></a>Git初始化配置</h2><ul>
-<li>提前准备用户名，邮箱</li>
-<li>git config –global user.name “用户名”</li>
-<li>git  config –global user.email “邮箱”</li>
-<li>ssh-keygen -t rsa -C “邮箱”</li>
-<li>cat ~/.ssh/id_rsa.pub并将输出的内容添加到Github账户/setttings/ssh and gpg keys</li>
-</ul>
-<h2 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a>初始化仓库</h2><ul>
-<li>创建一个用作本地存储的仓库目录</li>
-<li>Git init ：初始化仓库，相关配置在.git</li>
-<li>.git文件尽量不要修改</li>
-</ul>
-<h2 id="将文件添加到仓库并提交"><a href="#将文件添加到仓库并提交" class="headerlink" title="将文件添加到仓库并提交"></a>将文件添加到仓库并提交</h2><ul>
-<li>前置：创建一个文件，例如：readme.md</li>
-<li>git add readme.md</li>
-<li>git commit -am “开发日志”</li>
-<li>git status</li>
-</ul>
-<h2 id="查看文件版本记录"><a href="#查看文件版本记录" class="headerlink" title="查看文件版本记录"></a>查看文件版本记录</h2><ul>
-<li>git log 文件名查看</li>
-<li>commit 后面的标识即为版本号</li>
-</ul>
-<h2 id="回退版本"><a href="#回退版本" class="headerlink" title="回退版本"></a>回退版本</h2><ul>
-<li>git checkout 版本号 文件名</li>
-<li>git </li>
-</ul>
-<h2 id="将文件上传到Git服务器"><a href="#将文件上传到Git服务器" class="headerlink" title="将文件上传到Git服务器"></a>将文件上传到Git服务器</h2><ul>
-<li>前置：需要找到Git唱K地址，配置好SSH/GPG密钥</li>
-<li>git remote add origin github上的地址</li>
-<li>git push -u origin master</li>
-</ul>
-<h2 id="通常操作"><a href="#通常操作" class="headerlink" title="通常操作"></a>通常操作</h2><ul>
-<li>单用户本地修改文件：<ul>
-<li>git add</li>
-<li>git commit</li>
-<li>git push</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://guardlv.github.io/2020/05/05/%E7%AC%94%E8%AE%B008%EF%BC%9AGit%E4%B8%8EGithub%E4%BD%BF%E7%94%A8%E5%88%9D%E6%AD%A5/" data-id="ck9vchszd000eewaxdwd9altr" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Learning/" rel="tag">Learning</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%88%9B%E5%AE%A2%E4%B8%8E%E5%AD%A6%E7%A7%91%E6%95%99%E5%AD%A6%E5%BA%94%E7%94%A8/">创客与学科教学应用</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Learning/" rel="tag">Learning</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Learning/" style="font-size: 10px;">Learning</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/05/05/%E7%AC%94%E8%AE%B001%EF%BC%9AUbuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">笔记01：Ubuntu安装与配置</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/05/%E7%AC%94%E8%AE%B002%EF%BC%9AUbuntu%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/">笔记02：Ubuntu基本设置</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/05/%E7%AC%94%E8%AE%B003%EF%BC%9ALinux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">笔记03：Linux 基本命令</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/05/%E7%AC%94%E8%AE%B004%EF%BC%9ALinux%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86/">笔记04：Linux远程管理</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/05/%E7%AC%94%E8%AE%B005%EF%BC%9ALinux%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/">笔记05：Linux用户权限</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 Skylar<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
-</body>
-</html>
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isSidebar: false  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://s2.ax1x.com/2020/02/13/1qOFUI.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">19</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">8</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">8</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-book" aria-hidden="true"></i><span> 笔记</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/categories/%E5%88%9B%E5%AE%A2%E4%B8%8E%E5%AD%A6%E7%A7%91%E6%95%99%E5%AD%A6%E5%BA%94%E7%94%A8"><i class="fa-fw fab fa-ubuntu"></i><span> 创客与学科教学应用</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user-alt"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fa fa-envelope"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-heartbeat" aria-hidden="true"></i><span> 影音</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/gallery/"><i class="fa-fw fa fa-image"></i><span> 相册</span></a></li><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="photo"></div><div class="full_page" id="nav" style="background-color:transparent;"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">清·婉</a></span><span class="pull_right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-book" aria-hidden="true"></i><span> 笔记</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/categories/%E5%88%9B%E5%AE%A2%E4%B8%8E%E5%AD%A6%E7%A7%91%E6%95%99%E5%AD%A6%E5%BA%94%E7%94%A8"><i class="fa-fw fab fa-ubuntu"></i><span> 创客与学科教学应用</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user-alt"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fa fa-envelope"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-heartbeat" aria-hidden="true"></i><span> 影音</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/gallery/"><i class="fa-fw fa fa-image"></i><span> 相册</span></a></li><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="site-info"><h1 id="site_title">清·婉</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/liwanrong/liwanrong.github.io" target="_blank" title="Github"><i class="fab fa-github" aria-hidden="true"></i></a><a class="social-icon" href="mailto:645831899@qq.com" target="_blank" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i></a></div></div><div id="scroll_down"><i class="fa fa-angle-down scroll-down-effects"></i></div></div><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/11/09/Blog%20Building-Personal%20Blog%20Building%20Based%20on%20Hexo+GitHub/" title="【博客搭建】 基于Hexo+GitHub的个人博客搭建">     <img class="post_bg" data-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1573310872850&amp;di=a72b6afbca771a26cddd59a5ce07e277&amp;imgtype=0&amp;src=http%3A%2F%2Faliyunzixunbucket.oss-cn-beijing.aliyuncs.com%2Fjpg%2F8f758d4e914b780117430d09cca4f0f2.jpg%3Fx-oss-process%3Dimage%2Fresize%2Cp_100%2Fauto-orient%2C1%2Fquality%2Cq_90%2Fformat%2Cjpg%2Fwatermark%2Cimage_eXVuY2VzaGk%3D%2Ct_100" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【博客搭建】 基于Hexo+GitHub的个人博客搭建"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/11/09/Blog%20Building-Personal%20Blog%20Building%20Based%20on%20Hexo+GitHub/" title="【博客搭建】 基于Hexo+GitHub的个人博客搭建">【博客搭建】 基于Hexo+GitHub的个人博客搭建</a><div class="article-meta-wrap"><span class="article-meta"><i class="fa fa-thumb-tack article-meta__icon sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><time class="post-meta__date" title="发表于 2019-11-09 20:20:00"><i class="fa fa-calendar" aria-hidden="true"></i>2019-11-09</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/WebSite/">WebSite</a></span></div><div class="content">
+            本文档更新于2020年05月06日。
+          
+
+
+            主要对本博客做了如下修改：新增Gitee部署自建图床魔改主题延迟修复
+          
+
+　　为了尽早体会到拥有一个个人博客的乐趣，在使用Typecho搭建个人博客后由于不想出云服务 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/04/22/Task08%EF%BC%9AGit%E4%B8%8EGithub%E4%BD%BF%E7%94%A8%E5%88%9D%E6%AD%A5/" title="Task08：Git与Github使用初步">     <img class="post_bg" data-src="https://s2.ax1x.com/2020/02/12/1b3O6f.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Task08：Git与Github使用初步"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/04/22/Task08%EF%BC%9AGit%E4%B8%8EGithub%E4%BD%BF%E7%94%A8%E5%88%9D%E6%AD%A5/" title="Task08：Git与Github使用初步">Task08：Git与Github使用初步</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-04-22 11:08:35"><i class="fa fa-calendar" aria-hidden="true"></i>2020-04-22</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%88%9B%E5%AE%A2%E4%B8%8E%E5%AD%A6%E7%A7%91%E6%95%99%E5%AD%A6%E5%BA%94%E7%94%A8/">创客与学科教学应用</a></span></div><div class="content">Git简介
+版本控制系统（Version Control System, VCS）
+其它VCS: CVS, Subersion, Visual source safe
+开源共享，可以自架服务器，同时使用客户端访问与应用
+专用的第三方的Git服务，相当于租用了别人的Git服务器，在上面创建软件仓库并进 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/04/22/Task07%EF%BC%9A%E8%BF%9C%E7%A8%8B%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%A1%88/" title="Task07：远程文件传输的几种方案">     <img class="post_bg" data-src="https://s2.ax1x.com/2020/02/12/1b3O6f.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Task07：远程文件传输的几种方案"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/04/22/Task07%EF%BC%9A%E8%BF%9C%E7%A8%8B%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%A1%88/" title="Task07：远程文件传输的几种方案">Task07：远程文件传输的几种方案</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-04-22 11:07:40"><i class="fa fa-calendar" aria-hidden="true"></i>2020-04-22</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%88%9B%E5%AE%A2%E4%B8%8E%E5%AD%A6%E7%A7%91%E6%95%99%E5%AD%A6%E5%BA%94%E7%94%A8/">创客与学科教学应用</a></span></div><div class="content">scpscp扩展：Winscpsftp：可以理解为从ssh通道走的FTP可以使用的客户端
+Winscp
+Filezilla
+建议Windows中使用Chocolatey
+
+远程修改实现
+场景：需要修改远程主机上的某个文件
+解决方案　
+ssh远程登录并用nano，vi编辑
+先用scp、winscp等下 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/04/22/Task06%EF%BC%9ALinux%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/" title="Task06：Linux用户管理">     <img class="post_bg" data-src="https://s2.ax1x.com/2020/02/12/1b3O6f.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Task06：Linux用户管理"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/04/22/Task06%EF%BC%9ALinux%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/" title="Task06：Linux用户管理">Task06：Linux用户管理</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-04-22 11:07:30"><i class="fa fa-calendar" aria-hidden="true"></i>2020-04-22</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%88%9B%E5%AE%A2%E4%B8%8E%E5%AD%A6%E7%A7%91%E6%95%99%E5%AD%A6%E5%BA%94%E7%94%A8/">创客与学科教学应用</a></span></div><div class="content">创建、删除组
+创建组：groupadd
+删除组：groupdel
+tip: 创建新用户时，会自动创建同名用户组
+
+
+
+查看组信息
+cat /etc/group
+
+修改文件或目录的所在组
+sudo chgrp 组名、文件或目录
+默认不修改子目录组信息，要递归修改：
+chgrp -R 组名 目录名
+
+添 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/04/22/Task05%EF%BC%9ALinux%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/" title="Task05：Linux用户权限">     <img class="post_bg" data-src="https://s2.ax1x.com/2020/02/12/1b3O6f.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Task05：Linux用户权限"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/04/22/Task05%EF%BC%9ALinux%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/" title="Task05：Linux用户权限">Task05：Linux用户权限</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-04-22 11:07:15"><i class="fa fa-calendar" aria-hidden="true"></i>2020-04-22</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%88%9B%E5%AE%A2%E4%B8%8E%E5%AD%A6%E7%A7%91%E6%95%99%E5%AD%A6%E5%BA%94%E7%94%A8/">创客与学科教学应用</a></span></div><div class="content">用户权限
+以ls -l为例  -rw-rw-r– 1 lwr lwr  398 4月   1 00:16 id_rsa.pub
+依次：权限标识符，硬连接数，用户与组，文件容量，最后修改日期，名称
+
+权限标识符：10位
+第一位：d/- （类别，d表示目录 -表示文件）
+后九位：
+第一组RWX：拥有者的 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/04/22/Task04%EF%BC%9ALinux%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86/" title="Task04：Linux远程管理">     <img class="post_bg" data-src="https://s2.ax1x.com/2020/02/12/1b3O6f.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Task04：Linux远程管理"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/04/22/Task04%EF%BC%9ALinux%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86/" title="Task04：Linux远程管理">Task04：Linux远程管理</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-04-22 11:06:57"><i class="fa fa-calendar" aria-hidden="true"></i>2020-04-22</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%88%9B%E5%AE%A2%E4%B8%8E%E5%AD%A6%E7%A7%91%E6%95%99%E5%AD%A6%E5%BA%94%E7%94%A8/">创客与学科教学应用</a></span></div><div class="content">Ctrl-Alt-T:启动终端
+shutdown：开关机及重启命令
+默认一分钟关机
+取消: shutdown -c
+shutdown -r 重启
+定时任务： -num; hh:mm, now
+远程管理时尽量不要关机或重启
+
+ifconfig：网络配置
+ ifconfig | grep
+
+ping
+默 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/04/22/Task03%EF%BC%9ALinux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" title="Task03：Linux 基本命令">     <img class="post_bg" data-src="https://s2.ax1x.com/2020/02/12/1b3O6f.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Task03：Linux 基本命令"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/04/22/Task03%EF%BC%9ALinux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" title="Task03：Linux 基本命令">Task03：Linux 基本命令</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-04-22 11:05:39"><i class="fa fa-calendar" aria-hidden="true"></i>2020-04-22</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%88%9B%E5%AE%A2%E4%B8%8E%E5%AD%A6%E7%A7%91%E6%95%99%E5%AD%A6%E5%BA%94%E7%94%A8/">创客与学科教学应用</a></span></div><div class="content">文件与目录
+分区：Linux没有分区概念，Linux以目录的组织，只有根目录
+/bin：可执行文件
+/sbin：供超级用户使用的可执行文件 （s=super）
+/etc：配置文件
+eg：源地址：/etc/apt/sources.list
+
+
+/home：家目录，给用户存储文件用
+每一个用户都有一个用 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/04/22/Task02%EF%BC%9AUbuntu%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/" title="Task02：Ubuntu基本设置">     <img class="post_bg" data-src="https://s2.ax1x.com/2020/02/12/1b3O6f.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Task02：Ubuntu基本设置"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/04/22/Task02%EF%BC%9AUbuntu%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/" title="Task02：Ubuntu基本设置">Task02：Ubuntu基本设置</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-04-22 11:05:30"><i class="fa fa-calendar" aria-hidden="true"></i>2020-04-22</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/%E5%88%9B%E5%AE%A2%E4%B8%8E%E5%AD%A6%E7%A7%91%E6%95%99%E5%AD%A6%E5%BA%94%E7%94%A8/">创客与学科教学应用</a></span></div><div class="content">拓展：虚拟机镜像分享站点：https://www/osboxes.org/ubuntusf.net
+操作系统
+用户、应用软件、操作系统（内核（管理硬件系统）-系统调用，终端命令，图形界面））、硬件系统
+类型
+桌面：Windows Mac Linux
+服务器：Unix（最早 美国） Linux Win ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-fw fa-chevron-right" aria-hidden="true"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://s2.ax1x.com/2020/02/13/1qOFUI.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">清·婉</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">19</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">8</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">分类</div><div class="length_num">8</div></a></div></div><div class="card-info-bookmark is-center"><a class="bookmark button--primary button--animated" id="bookmark-it" href="javascript:;" title="加入书签" target="_self"><i class="fa fa-bookmark" aria-hidden="true"></i><span>加入书签</span></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/liwanrong/liwanrong.github.io" target="_blank" title="Github"><i class="fab fa-github" aria-hidden="true"></i></a><a class="social-icon" href="mailto:645831899@qq.com" target="_blank" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fa fa-bullhorn card-announcement-animation" aria-hidden="true"></i><span>公告</span></div><div class="announcement_content">与你相遇，是我的幸运~</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fa fa-history" aria-hidden="true"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/2020/04/22/Task08%EF%BC%9AGit%E4%B8%8EGithub%E4%BD%BF%E7%94%A8%E5%88%9D%E6%AD%A5/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://s2.ax1x.com/2020/02/12/1b3O6f.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="Task08：Git与Github使用初步" alt="Task08：Git与Github使用初步"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/04/22/Task08%EF%BC%9AGit%E4%B8%8EGithub%E4%BD%BF%E7%94%A8%E5%88%9D%E6%AD%A5/" title="Task08：Git与Github使用初步">Task08：Git与Github使用初步</div><time class="aside-post_meta post-meta__date" title="发表于 2020-04-22 11:08:35">2020-04-22</time></div></a></div><div class="aside-recent-post"><a href="/2020/04/22/Task07%EF%BC%9A%E8%BF%9C%E7%A8%8B%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%A1%88/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://s2.ax1x.com/2020/02/12/1b3O6f.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="Task07：远程文件传输的几种方案" alt="Task07：远程文件传输的几种方案"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/04/22/Task07%EF%BC%9A%E8%BF%9C%E7%A8%8B%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%A1%88/" title="Task07：远程文件传输的几种方案">Task07：远程文件传输的几种方案</div><time class="aside-post_meta post-meta__date" title="发表于 2020-04-22 11:07:40">2020-04-22</time></div></a></div><div class="aside-recent-post"><a href="/2020/04/22/Task06%EF%BC%9ALinux%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://s2.ax1x.com/2020/02/12/1b3O6f.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="Task06：Linux用户管理" alt="Task06：Linux用户管理"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/04/22/Task06%EF%BC%9ALinux%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/" title="Task06：Linux用户管理">Task06：Linux用户管理</div><time class="aside-post_meta post-meta__date" title="发表于 2020-04-22 11:07:30">2020-04-22</time></div></a></div><div class="aside-recent-post"><a href="/2020/04/22/Task05%EF%BC%9ALinux%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://s2.ax1x.com/2020/02/12/1b3O6f.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="Task05：Linux用户权限" alt="Task05：Linux用户权限"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/04/22/Task05%EF%BC%9ALinux%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/" title="Task05：Linux用户权限">Task05：Linux用户权限</div><time class="aside-post_meta post-meta__date" title="发表于 2020-04-22 11:07:15">2020-04-22</time></div></a></div><div class="aside-recent-post"><a href="/2020/04/22/Task04%EF%BC%9ALinux%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://s2.ax1x.com/2020/02/12/1b3O6f.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="Task04：Linux远程管理" alt="Task04：Linux远程管理"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/04/22/Task04%EF%BC%9ALinux%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86/" title="Task04：Linux远程管理">Task04：Linux远程管理</div><time class="aside-post_meta post-meta__date" title="发表于 2020-04-22 11:06:57">2020-04-22</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fa fa-folder-open" aria-hidden="true"></i><span>分类</span></div><ul class="card-category-list">
+            <li class="card-category-list-item"><a class="card-category-list-link" href="/categories/Educating/"><span class="card-category-list-name">Educating</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item"><a class="card-category-list-link" href="/categories/Learning/"><span class="card-category-list-name">Learning</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item"><a class="card-category-list-link" href="/categories/Major-Learning/"><span class="card-category-list-name">Major Learning</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item"><a class="card-category-list-link" href="/categories/Markdown%E8%AF%AD%E6%B3%95/"><span class="card-category-list-name">Markdown语法</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item"><a class="card-category-list-link" href="/categories/SQL-Server/"><span class="card-category-list-name">SQL Server</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item"><a class="card-category-list-link" href="/categories/Thinking/"><span class="card-category-list-name">Thinking</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item"><a class="card-category-list-link" href="/categories/WebSite/"><span class="card-category-list-name">WebSite</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item"><a class="card-category-list-link" href="/categories/%E5%88%9B%E5%AE%A2%E4%B8%8E%E5%AD%A6%E7%A7%91%E6%95%99%E5%AD%A6%E5%BA%94%E7%94%A8/"><span class="card-category-list-name">创客与学科教学应用</span><span class="card-category-list-count">8</span></a></li>
+                       
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fa fa-tags" aria-hidden="true"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Hexo/" style="font-size: 16px; color: #999">Hexo</a> <a href="/tags/Learning/" style="font-size: 22px; color: #99a9bf">Learning</a> <a href="/tags/Markdown/" style="font-size: 16px; color: #999">Markdown</a> <a href="/tags/RMMV/" style="font-size: 16px; color: #999">RMMV</a> <a href="/tags/Reading/" style="font-size: 16px; color: #999">Reading</a> <a href="/tags/SQL/" style="font-size: 16px; color: #999">SQL</a> <a href="/tags/Skills/" style="font-size: 19px; color: #99a1ac">Skills</a> <a href="/tags/Typecho/" style="font-size: 16px; color: #999">Typecho</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fa fa-archive" aria-hidden="true"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">四月 2020</span><span class="card-archive-list-count">8</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/02/"><span class="card-archive-list-date">二月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/01/"><span class="card-archive-list-date">一月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/12/"><span class="card-archive-list-date">十二月 2019</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/11/"><span class="card-archive-list-date">十一月 2019</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/10/"><span class="card-archive-list-date">十月 2019</span><span class="card-archive-list-count">3</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line" aria-hidden="true"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">19</div></div><div class="webinfo-item"><div class="webinfo-runtime-name">已运行时间 :</div><div class="webinfo-runtime-count" id="webinfo-runtime-count" start_date="11/8/2019 00:00:00">     </div></div><div class="webinfo-item"><div class="webinfo-site-wordcount-name">本站总字数 :</div><div class="webinfo-site-wordcount">12.3k</div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" style="background-color:transparent;" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2020 By 清·婉</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text">表独立兮山之上，云容容兮而在下。</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">简</a><i class="darkmode far fa-moon" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script><script src="/js/third-party/click_heart.js"></script><script src="/js/search/local-search.js"></script><script src="https://cdn.jsdelivr.net/npm/typed.js"></script><script>var subtitleType = function () {
+  loadScript('https://sdk.jinrishici.com/v2/browser/jinrishici.js',function () {
+      var subtitleEffect = true
+      jinrishici.load(function (result) {
+        if (subtitleEffect) {
+          var sub = ''.length == 0 ? new Array() : ''.split(',')
+          var content = result.data.content
+          var both = sub.unshift(content)
+          var typed = new Typed('#subtitle', {
+            strings: sub,
+            startDelay: 300,
+            typeSpeed: 150,
+            loop: false,
+            backSpeed: 50,
+          })
+        } else {
+          document.getElementById('subtitle').innerHTML = result.data.content
+        }
+      })
+    }
+  )
+}
+window.addEventListener('load', subtitleType)
+</script><script src="/jsdelivr.js"></script><script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script></body></html>
