@@ -107,8 +107,8 @@ Markdown简明教程：https://github.com/Melo618/Simple-Markdown-Guide</p>
       </section>
       <section class="game-all-success game-ui">
         <h1 class="section-title">通关成功</h1>
-        <p class="game-next-level game-info-text">你已经成功地防御了怪兽的所有攻击。</p>
-        <button class="js-replay button">再玩一次</button>
+        <p class="game-next-level game-info-text">完成阅读</p>
+        <button class="js-replay button">重新阅读</button>
       </section>
     </div>
     <canvas id="canvas" width="700px" height="600px">
