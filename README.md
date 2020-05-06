@@ -1,88 +1,428 @@
-＃Scarlettkan.github-io
-龚伶俐
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="This is a testing demo page">
+    <meta name="keywords" content="testing,html,demo">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Testing Demo Project</title>
+<link rel="stylesheet" type="text/css" href="project.css">
+    <link rel="stylesheet"  href="lib/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <div id="head">
+        <div class="logo_title">
+               <h1>LinuxCast.net Demo Site</h1>
+               <h2>简易的个性主页</h2>
+        </div>
+        <div class="navi">
+           <ul>
+               <li><a href = "">首页</a></li>
+               <li><a href = "">闲言碎语</a></li>
+               <li><a href = "">我是谁</a></li>
+           </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+ 
+ 
+    <div id="wrapper">
+        <div class="main">
+              <div class="item">
+                 <div class="item_img">
+                    <img src="cast.png" alt="Testing Demo Project pic">
+                 </div>
+                 <div class="item_content">
+                    <h3>LinuxCast测试标题测试标题</h3>
+                    <p class="item_info">作者：XXX  发表于：2017年7月15号</p>
+                    <p class="item_desc">LinuxCast测试内容测试内容测试内容测试文字测<br>
+                    测试文字测试文字测试文字测试文字测试文字测试文字</p>
+                 </div>
+              </div>
+              <div class="item">
+                 <div class="item_img">
+                    <img src="cast.png" alt="Testing Demo Project pic">
+                 </div>
+                 <div class="item_content">
+                    <h3>LinuxCast测试标题测试标题</h3>
+                    <p class="item_info">作者：XXX 发表于：2017年7月15号</p>
+                    <p class="item_desc">LinuxCast测试内容测试内容测试内容测试文字测<br>
+                    测试文字测试文字测试文字测试文字测试文字测试文字</p>
+                 </div>
+              </div>
+ 
+ 
+              <div class="item">
+                 <div class="item_img">
+                    <img src="cast.png" alt="Testing Demo Project pic">
+                 </div>
+                 <div class="item_content">
+                    <h3>LinuxCast测试标题测试标题</h3>
+                    <p class="item_info">作者：XXX 发表于：2017年7月15号</p>
+                    <p class="item_desc">LinuxCast测试内容测试内容测试内容测试文字测<br>
+                    测试文字测试文字测试文字测试文字测试文字测试文字</p>
+                 </div>
+              </div>
+ 
+ 
+              <div class="item">
+                 <div class="item_img">
+                    <img src="cast.png" alt="Testing Demo Project pic">
+                 </div>
+                 <div class="item_content">
+                    <h3>LinuxCast测试标题测试标题</h3>
+                    <p class="item_info">作者：XXX 发表于：2017年7月15号</p>
+                    <p class="item_desc">LinuxCast测试内容测试内容测试内容测试文字测<br>
+                    测试文字测试文字测试文字测试文字测试文字测试文字</p>
+                 </div>
+              </div>
+        </div>
+        <div class="side">
+              <div class="author_info">
+                   <div class="author_img">
+                      <img src="author.jpg" alt="Testing Demo project pic">
+                   </div>
+                   <div class="author_desc">
+                      <h4>Double Sweet</h4>
+                      <p>emmm..<br>
+                        emmmmmmmm...</p>
+                   </div>
+              </div>
+              <div class="top_article">
+                   <h4>推荐文章</h4>
+                   <ul>
+                   <li>好文要顶-1</li>
+                   <li>好文要顶-2</li>
+                   <li>好文要顶-3</li>
+                   <li>好文要顶-4</li>
+                   <li>好文要顶-5</li>
+                   </ul>
+              </div>
+              <div class="site-info">
+                   <p>访客：555555</p>
+                   <p>文章：666篇</p>
+              </div>
+        </div>
+        <div class="clear"></div>
+ 
+ 
+    </div>
+ 
+ 
+    <div id="footer">
+      <div class="site_about">
+           <p>2015-2017 CopyRight LinuxCast.net Demo Site</p>
+      </div>
+      <div class="site_link">
+           <ul>
+              <li><a href = "">关于我们</a></li>
+              <li><a href = "">联系我们</a></li>
+              <li><a href = "">使用条款</a></li>
+              <li><a href = "">意见反馈</a></li>
+           </ul>
+      </div>
+      <div class="clear"></div>
+ 
+ 
+    </div>
+ 
+ 
+    <script src="lib/jquery-2.1.1.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
+//CSS
 
-
-近日，谷歌向所有人免费开放了自家的高端视频会议应用，Google Meet。4月初，微软的Skype新增了一项功能，允许用户通过点击一个链接来跳转到一个通话中。这两家公司似乎都在追赶最近突然流行起来的Zoom，尽管它们本身都是占主导地位的科技巨头公司，二者在过去将近十年的时间里一直在发布互相竞争的产品。
-
- 
-
-几乎整个2010年代初期，Skype和Hangouts（最终进化成Meet）都是视频聊天应用的业界标杆。那么，后来Zoom又是如何脱颖而出的呢？
-
- 
-
-在视频聊天领域，微软和谷歌从一开始就采取了与Zoom不同的策略。2011年，Zoom作为一款功能单一的应用推出，重心全都放在视频聊天上。而与此同时，这两家科技巨头则将群视频聊天作为其他服务的附加功能推出，比如Skype的语音通话平台，或谷歌失败的社交网络应用，Google+。要想在Hangouts上聊天，用户必须登录Google+。要想进行10人的群视频聊天，用户必须加载出来笨重的Skype桌面app。在那时候，这还只能算是一个小小的负担，但从长远来看，这一点让两家公司都处于战略劣势。
-
- 
-
-虽然视频聊天功能本身运行良好，但它所依附的服务却陷入了困境。随着智能手机让WhatsApp、Facebook Messenger和iMessage等新的应用程序进入了市场，Skype无法作为一个通用信息平台立足。这些其他应用对基于SMS的短信进行了改进，分别吸引了数百万用户入驻他们的平台。
-
- 
-
-随后，2013年，Facebook宣布将向美国境内的所有iOS用户免费提供语音通话服务。此举对Skype来说，看似不痛不痒，实际却无异于灭顶之灾。虽然在当时Skype被广泛认为是很棒的跨平台语音和视频聊天应用之一，但Facebook已经将Skype的核心产品下潜到了一个拥有数亿用户的消息平台，而这些用户并不总是需要通过语音沟通。这时，只提供一种沟通功能已经远远不够了。在那个年代，一个成功的，像谷歌和微软那样运营体量下的平台，必须提供所有的功能。
-
- 
-
-谷歌清晰地觉察到了这个信号，尽管有点太晚了。在Facebook推出免费通话后不久，这家搜索公司宣布将把Hangouts拆分出来，成为一个独立的服务，将文字、语音和视频通话统一在一个应用上。不幸的是，谷歌决定同时维护同一产品的多个版本，这个策略破坏了计划。谷歌将Google Talk维护到了2017年，甚至一直到2016年推出Allo（另一个新的即时通讯应用）之后还在维护。谷歌在2018年关闭了Allo。
-
- 
-
-过去十年来，微软和谷歌在视频聊天领域的历史，描绘了这两个公司在奋力寻找合适受众过程中的挣扎。
-
- 
-
-到2015年，与面向消费者的竞争对手相比，无论是Hangouts还是Skype，都没有取得好的成绩。而与此同时，一个新的威胁正伺机而动。
-
- 
-
-Slack进入了聊天领域。
-
- 
-
-这家面向工作的聊天服务商的目标是占领商务通信市场，当时冗长的电子邮件链和笨拙的即时信息是最好的选择。微软和谷歌分别凭借Office和G Suite在企业级市场上占据着强势的地位，因此，由于未能让消费者接受自家的短信应用，他们两家选择将聊天平台转向企业级市场。
-
- 
-
-群视频聊天也随之而来。此时，大多数主要的通信应用程序都已经有了某种形式的一对一视频通话，而让许多用户聚集在一个视频聊天中是一种比较小众的情况，总体上来说用户并不十分感冒。可以说，群视频在企业场景下更有有用武之地，因为它能允许团队之间进行远程会议，以及快速的面对面讨论，而相比之下通过文字短信来沟通商业计划就显得效率低下了。
-
- 
-
-2017年，在谷歌动作（将Hangouts转向商业）的近一年之后，谷歌又推出了 "Hangouts Chat "和 "Hangouts Meet "的聊天软件，不得不说这二者的起名太随意了。Chat是一个类似Slack的聊天室程序，而Meet是一个视频会议应用，它与2011年最初推出的Hangouts以及现在的Zoom最相似。虽然理论上来说，谷歌仍然通过面向消费者的Hangouts提供视频聊天功能，但该公司自2018年以来一直在暗示自己最终将为G Suite用户关闭Hangouts。
-
- 
-
-这让一来，谷歌向所有Gmail用户免费提供Google Meet的举动就更加显得刺眼了。眼下，谷歌正提供两个互相竞争的视频聊天服务，这两项服务至少到最近，都还是Hangouts旗下的。
-
- 
-
-谷歌并没有明说有多少用户使用Chat（尽管它报告说有600万企业为G Suite付费，其中包括Chat），但微软Slack的竞争对手，Microsoft Teams却顺风顺水。在2017年公开推出后，一直到2019年年底，Microsoft Teams的每日活跃用户数迅速超过了Slack，而且随着远程工作的增加，在过去的一个月里，每日活跃用户数又出现了大幅飙升。
-
- 
-
-但是，和谷歌一样，微软也花了多年的时间来维护多个视频聊天产品。Teams在推出时就包括了视频聊天功能。公司同时也通过Skype for Business提供视频聊天，公司在2017年时曾表示将在2021年淘汰它，不过使用Skype for Business的公司仍可以继续用。最后，还有面向消费者的基础Skype应用，也有视频聊天功能。
-
- 
-
-这就意味着，现在，如果你想通过微软的产品进行群视频聊天，你有三种不同的选择，其中有两种叫Skype。
-
- 
-
-到了冠状病毒大流行的时候，谷歌和微软最好的视频聊天产品，要么就被附加在用户不再需要的消费类产品上，要么就被锁定在企业级产品内，太过繁琐，无法很快地设置好。与视频聊天本身是否好用无关，它们所依附的平台那时候面向的受众群体不对。
-
- 
-
-在视频会议功能的需求突然出现不可预知的激增时，这两家公司所面对的形势都无法使自身很好地把握住这个机会。但是，他们现在的处境不利，部分原因在于一直没有真正赶上自己所追逐的市场。过去十年来，微软和谷歌在视频聊天领域的历史，描绘了这两个公司在奋力寻找合适受众过程中的挣扎。最开始，他们在用户需要文字聊天的时候建立了视频会议应用。然后，在用户需要企业群聊的时候，他们转型去做文字聊天应用。现在，他们又从企业群聊转向视频会议。
-
- 
-
-在一个平台为王的市场中，只做出一个优秀的功能不足以保证成功。但是，Zoom却证明了，专注于一点，足矣。
-
- 
-
-原文链接：
-
-https://onezero.medium.com/how-zoom-beat-the-tech-giants-80b4feb2988c
-
-本文为程序人生翻译文章，转载请注明出处。
+body{
+background-image: url("bg.jpg");
+}
+ 
+ 
+a{
+color: grey;/*背景颜色*/
+text-decoration: none;/*去除文字的下划线*/
+}
+ 
+ 
+#head{
+width: 960px;
+margin: auto;
+border-bottom: dotted 1px white; /*设置了白色的分界线*/ 
+margin-bottom: 10px;
+}
+ 
+ 
+.logo_title{
+    float: left;
+}
+ 
+ 
+.logo_title h1{
+font-size: 30px;
+color: white;
+}
+ 
+ 
+.logo_title h2{
+font-size: 20px;
+color: white;
+}
+ 
+ 
+.navi{
+float: right;
+}
+ 
+ 
+.navi ul{
+list-style: none;/*去除前面的黑点*/
+margin-top: 75px;
+}
+ 
+ 
+.navi ul li{
+display: inline-block;/*排列方式，排列到一行*/
+font-size: 20px;
+color: white;/*写不写都可以*/
+margin-right: 20px;/*外填充距离*/
+}
+ 
+ 
+.navi ul li a{
+color: white;
+   border:solid 1px white;/*白色的方框*/
+   border-radius: 6px;/*边角设置弧度*/
+   padding: 4px;/*上下内填充*/
+   padding-left: 14px;/*左内边距*/
+   padding-right: 14px;/*右内边距*/
+}
+ 
+ 
+.clear{
+clear: both;
+}
+#wrapper{
+margin: auto;
+width: 960px;
+margin-top: 20px;
+}
+ 
+ 
+.main{
+   width: 640px;
+   background-color: white;
+   float: left;
+   margin-right:10px;
+   padding: 20px;
+   border-radius: 4px;
+}
+ 
+ 
+.item{
+margin-top: 14px;
+padding-bottom: 20px;
+border-bottom: dotted 1px #999;
+ 
+ 
+}
+ 
+ 
+.item_img{
+float: left;
+width: 100px;
+}
+ 
+ 
+.item_img img{
+width: 80px;
+}
+ 
+ 
+.item_content{
+    /*padding-left: 100px;*/
+    /*float: right;*/
+    margin-bottom: 10px;
+}
+ 
+ 
+.item_content h3{
+font-size: 14px;
+color: #FF6347;
+margin: 0;
+}
+ 
+ 
+.item_info{
+font-size: 12px;
+font-style: italic;
+margin:0;
+color: #999;
+}
+ 
+ 
+.item_desc{
+font-size: 14px;
+margin: 0;
+color: gray;
+margin-top:10px; /*与h2有一定的边距*/
+border-left: solid 1px #ccc;/*设置左边框*/
+padding-left: 10px;/*设置左填充*/
+}
+ 
+ 
+ 
+ 
+.side{
+   width: 220px;
+   background-color: white ;
+   float: right;
+   padding: 20px;
+   border-radius: 6px;
+   margin-left: 10px;
+   height: 450px;
+}
+ 
+ 
+.author_img{
+   margin-top: 20px;
+   width: 120px;
+   margin:auto;
+}
+ 
+ 
+.author_img img{
+width: 120px;
+border:solid 1px #ccc;
+border-radius: 4px;
+}
+ 
+ 
+.author_desc{
+   text-align: center;
+   border:solid 1px #ccc;
+   border-radius: 4px;
+   background-color: #eee;
+   padding-top:10px;
+   padding-bottom: 10px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+ 
+ 
+.author_desc h4{
+margin:0;
+margin-bottom: 10px;
+}
+ 
+ 
+.author_desc p{
+margin:0;
+font-size: 14px;
+margin-bottom: 10px;
+}
+ 
+ 
+.top_article h4{
+font-size:14px;
+font-style: italic;
+margin:0;
+border-bottom: dotted 1px #999;
+border-top: 10px;
+}
+ 
+ 
+.top_article ul{
+margin-left:0;
+padding-left:10px;
+list-style: none;
+ 
+ 
+}
+ 
+ 
+.top_article ul li{
+margin:0;
+font-size: 14px;
+margin-top: 5px;
+ 
+ 
+}
+ 
+ 
+/*.site_info{
+margin-top: 30px;
+border-top: solid 1px #ccc; 
+}
+.site_info p{
+font-size: 14px;
+color: gray;
+margin:0;
+padding-left: 60px;
+margin-top: 10px;
+}*/
+.site-info{
+margin-top: 30px;
+border-top: solid 1px #ccc;/*分界线*/
+}
+ 
+ 
+.site-info p{
+font-size: 14px;
+color: gray;
+text-align: center;
+/*padding-left: 60px;/*左填充*/
+margin:0;
+margin-top: 10px;
+}
+ 
+ 
+#footer{
+margin: auto;
+width: 960px;
+border-top: dotted 1px #ccc;
+margin-top: 20px;
+}
+ 
+ 
+.site_about{
+float: left;
+padding-top: 15px;
+}
+ 
+ 
+.site_about p{
+font-size: 16px;
+color: white;
+}
+ 
+ 
+.site_link{
+float: right;
+}
+ 
+ 
+.site_link ul{
+list-style: none;
+margin-top: 30px;
+}
+ 
+ 
+.site_link ul li{
+display: inline-block;
+font-size: 14px;
+margin-right: 10px;
+color: white;
+}
+ 
+ 
+.site_link ul li a{
+border-radius: 6px;
+border:solid 1px white;
+padding: 4px;
+padding-left: 10px;
+padding-right: 10px;
+color: white;
+}
 ————————————————
-版权声明：本文为CSDN博主「CSDN 程序人生」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/csdnsevenn/java/article/details/105941859
+版权声明：本文为CSDN博主「doubleSweet.」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/double_sweet1/java/article/details/78608710
